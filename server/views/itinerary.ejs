@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Add Itinerary</title>
+</head>
+<body>
+  <h2>Add Itinerary</h2>
+  <form method="post" action="/itineraries">
+    <label>User ID <input type="number" name="userId"></label><br>
+    <label>Airline <input type="text" name="airline"></label><br>
+    <label>Flight Number <input type="text" name="flightNumber"></label><br>
+    <label>Depart Airport <input type="text" name="departAirport"></label><br>
+    <label>Arrival Airport <input type="text" name="arrivalAirport"></label><br>
+    <label>Depart Time <input type="datetime-local" name="departTime"></label><br>
+    <label>Arrival Time <input type="datetime-local" name="arrivalTime"></label><br>
+    <label>Layover Airport <input type="text" name="layoverAirport"></label><br>
+    <label>Layover Start <input type="datetime-local" name="layoverStart"></label><br>
+    <label>Layover End <input type="datetime-local" name="layoverEnd"></label><br>
+    <button type="submit">Save</button>
+  </form>
+</body>
+</html>

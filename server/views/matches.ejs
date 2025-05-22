@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Matches</title>
+</head>
+<body>
+  <h2>Layover Matches</h2>
+  <ul>
+    <% matches.forEach(m => { %>
+      <li><%= m.user1 %> &amp; <%= m.user2 %> at <%= m.airport %> from <%= m.start %> to <%= m.end %></li>
+    <% }); %>
+  </ul>
+</body>
+</html>
