@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Share Itinerary</h2>
+<p>{{ itinerary.airline }} {{ itinerary.flight_number }}</p>
+<form method="post">
+  <label>Group:
+    <select name="group_id">
+      {% for g in groups %}
+        <option value="{{ g.id }}">{{ g.name }}</option>
+      {% endfor %}
+    </select>
+  </label>
+  <input type="submit" value="Share">
+</form>
+{% endblock %}

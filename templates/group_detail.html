@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Group: {{ group.name }}</h2>
+<h3>Members</h3>
+<ul>
+{% for m in group.memberships %}
+  <li>{{ m.user.username }}</li>
+{% endfor %}
+</ul>
+<h3>Add Member</h3>
+<form method="post">
+  <label>Username: <input type="text" name="username"></label>
+  <input type="submit" value="Add">
+</form>
+<h3>Shared Itineraries</h3>
+<ul>
+{% for it in itineraries %}
+  <li>{{ it.user.username }}: {{ it.airline }} {{ it.flight_number }} at {{ it.layover_airport }}</li>
+{% else %}
+  <li>No shared itineraries</li>
+{% endfor %}
+</ul>
+{% endblock %}
