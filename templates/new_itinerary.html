@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>New Itinerary</h2>
+<form method="post">
+  <label>Airline: <input type="text" name="airline"></label><br>
+  <label>Flight Number: <input type="text" name="flight_number"></label><br>
+  <label>Departure Airport: <input type="text" name="departure_airport"></label><br>
+  <label>Arrival Airport: <input type="text" name="arrival_airport"></label><br>
+  <label>Departure Time (YYYY-MM-DD HH:MM): <input type="text" name="departure_time"></label><br>
+  <label>Arrival Time (YYYY-MM-DD HH:MM): <input type="text" name="arrival_time"></label><br>
+  <label>Layover Airport: <input type="text" name="layover_airport"></label><br>
+  <label>Layover Start (YYYY-MM-DD HH:MM): <input type="text" name="layover_start"></label><br>
+  <label>Layover End (YYYY-MM-DD HH:MM): <input type="text" name="layover_end"></label><br>
+  <input type="submit" value="Add">
+</form>
+{% endblock %}
