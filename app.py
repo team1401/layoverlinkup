@@ -238,7 +238,5 @@ def initdb():
     return 'Database initialized'
 
 if __name__ == '__main__':
-1i6jwo-codex/create-layoverlinkup-travel-app
+
     app.run(host='0.0.0.0', debug=True)
-    app.run(debug=True)
-main
