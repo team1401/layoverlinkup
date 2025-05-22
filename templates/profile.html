@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Profile</h2>
+<form method="post">
+  <label>Home Airport: <input type="text" name="home_airport" value="{{ user.home_airport }}"></label><br>
+  <label>Contact Info: <input type="text" name="contact_info" value="{{ user.contact_info }}"></label><br>
+  <input type="submit" value="Save">
+</form>
+{% endblock %}

@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Dashboard</h2>
+<p>Welcome, {{ user.username }}!</p>
+<p><a href="{{ url_for('new_itinerary') }}">Add Itinerary</a></p>
+<h3>Your Itineraries</h3>
+<ul>
+{% for it in itineraries %}
+  <li>{{ it.airline }} {{ it.flight_number }} {{ it.departure_airport }} -> {{ it.arrival_airport }} <a href="{{ url_for('share_itinerary', itinerary_id=it.id) }}">Share</a></li>
+{% else %}
+  <li>No itineraries</li>
+{% endfor %}
+</ul>
+<h3>Potential Matches</h3>
+{% for match in matches %}
+  <div class="match">
+    <strong>Group:</strong> {{ match.group.name }}<br>
+    <strong>Airport:</strong> {{ match.airport }}<br>
+    <strong>Start:</strong> {{ match.start }}<br>
+    <strong>End:</strong> {{ match.end }}<br>
+    <strong>Duration (min):</strong> {{ match.duration|int }}
+  </div>
+{% else %}
+  <p>No matches</p>
+{% endfor %}
+{% endblock %}
